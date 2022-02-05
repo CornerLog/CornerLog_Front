@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -20,12 +20,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-x=r4@osxl89&rq#8e0m$*n#al$32wkp&#+$&v^t)&_3702z4x+'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 1
 
-ALLOWED_HOSTS = []
+if os.environ.get('DJANGO_ALLOWED_HOSTS'):
+    ALLOWED_HOST = os.environ.get('DJANGO_ALLOWED_HOSTS').split(' ')
+else: # DJANGO_ALLOWED_HOSTS 선언이 없다면
+    ALLOWED_HOSTS = []
+
 
 
 # Application definition
@@ -75,12 +79,12 @@ WSGI_APPLICATION = 'cornerlog_server.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'corner',
-        'USER' : 'root',
-        'PASSWORD' : 'corner',
-        'HOST' : 'localhost',
-        'PORT' : '5432'
+        'ENGINE': os.environ.get("SQL_ENGINE", 'django.db.backends.sqlite3'),
+        'NAME': os.environ.get("SQL_DATABASE", os.path.join(BASE_DIR, 'db.sqlite3')),
+        'USER': os.environ.get('SQL_USER', 'user'),
+        'PASSWORD': os.environ.get("SQL_PASSWORD", 'password'),
+        'HOST': os.environ.get("SQL_HOST", 'localhost'),
+        'PORT': os.environ.get("SQL_PORT", '5432')
     }
 }
 
