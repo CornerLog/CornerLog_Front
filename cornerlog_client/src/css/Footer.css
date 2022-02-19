@@ -1,0 +1,50 @@
+.footer {
+    background: #73160E;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    font-size: 10px;
+    color: #ffffff;
+    justify-content: space-between;
+    align-content: center;
+    font-family: 'S-CoreDream-5Medium';
+}
+
+.footer-left {
+    padding-left: 30px;
+}
+
+.footer-right {
+    display: flex;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.footer-text {
+    font-size : 10px;
+    margin-bottom: 0px;
+}
+
+
+.footer-head {
+    font-family: "Abril Fatface";
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.footer-contact {
+    font-family: "Abril Fatface";
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display : inline-block;
+    margin-right : 0px;
+}
