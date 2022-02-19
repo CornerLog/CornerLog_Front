@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+.top{
+  background-color: #FFFFFF;
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.topImg{
+  width:100%;
+  position:sabsolute;
+  top:0;
+}
+.topBanner img{
+  width:100%;
+}
+.fancySentence{
+  font-family: 'Cookie', cursive;
+  width:80%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top:37px;
+}
+.bottomImg{
+  width:100%;
+  z-index: 0;
+}
+.slideDiv{
+  z-index:1;
+  width:50%;
+  background-color: aquamarine;
+  position:relative;
+  bottom:0px;
+}
+
+.bottom{
+  background-color: #FF6F61;
+  width:100%;
+}
+.goalDiv{
+  width:100%;
+  display:flex;
+  justify-content: space-around;
+}
+.goalItem{
+  /* background-color: #F2913D; */
+  background-image: url("../../public/img/goalitem1.png");
+  background-size:604px 407px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
