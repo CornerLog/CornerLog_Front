@@ -1,0 +1,120 @@
+.body {
+  background-image: url("../../public/img/guestbook_background.svg");
+  background-repeat: no-repeat;
+  height: 928px;
+  display: flex;
+}
+
+.form {
+  background-color: #fe8a7f;
+  width: 554px;
+  height: 540px;
+  border-radius: 30px;
+  position: relative;
+  top: 10%;
+  left: 10%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form::before {
+  content: "";
+  border-top: 60px solid #fe8a7f;
+  border-right: 40px solid transparent;
+  position: absolute;
+  top: 100%;
+  left: 45%;
+}
+
+.button {
+  all: unset;
+  position: relative;
+  top: 15%;
+  left: 20%;
+  cursor: pointer;
+}
+
+.text {
+  position: absolute;
+  top: 40%;
+  right: 20%;
+  color: white;
+  font-family: "SCDream9";
+  letter-spacing: 3px;
+  font-size: 1.8em;
+}
+
+.form {
+  color: #620004;
+  font-family: "SCDream6";
+  font-size: 1.3em;
+}
+
+.formTop input {
+  width: 225px;
+  height: 50px;
+  margin-top: 10px;
+  background-color: #fff5f2;
+  border: none;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-left: 15px;
+  color: #620004;
+  font-size: 18px;
+  font-family: "SCDream5";
+}
+
+.formTop input::placeholder {
+  color: #bfa6a2;
+  font-size: 18px;
+  font-family: "SCDream5";
+}
+
+.formTop {
+  display: flex;
+  padding: 30px;
+  justify-content: space-around;
+}
+
+.formName {
+  margin-right: 20px;
+}
+
+.formBottom {
+  padding: 0 30px 0 30px;
+}
+
+.formBottom textarea {
+  margin-top: 10px;
+  background-color: #fff5f2;
+  border: none;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 20px 0 0 20px;
+  resize: none;
+  color: #620004;
+  font-size: 18px;
+  font-family: "SCDream5";
+}
+
+.formBottom textarea::placeholder {
+  color: #bfa6a2;
+  font-size: 18px;
+  font-family: "SCDream5";
+}
+
+.card {
+  width: 326px;
+  background: #f36444;
+  font-size: 16px;
+  padding: 20px 20px 30px 20px;
+  border-radius: 30px;
+}
+
+.cardtitle {
+  margin-bottom: 15px;
+  color: #5a5a5a;
+  font-family: "SCDream7";
+}
+
+.cardcontent {
+  color: #e6e6e6;
+  font-family: "SCDream4";
+}
