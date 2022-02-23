@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "MADE Mirage Regular";
+    src: url("../font/MADE Mirage Regular.otf");
+}
+@font-face {
+    font-family: "MADE Mirage Black";
+    src: url("../font/MADE Mirage Black.otf");
+}
 .navbar {
     background: linear-gradient( to right, #DB3655, #D95770 );
     height: 80px;
@@ -7,7 +15,7 @@
     color: #F7F5DD;
     justify-content: space-between;
     align-content: center;
-    font-family: "MADE Mirage";
+    font-family: "MADE Mirage Regular";
 }
 
 .left{
