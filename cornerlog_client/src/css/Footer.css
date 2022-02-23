@@ -3,11 +3,11 @@
     height: 100%;
     width: 100%;
     display: flex;
-    font-size: 10px;
+    font-size: 15px;
     color: #ffffff;
     justify-content: space-between;
     align-content: center;
-    font-family: 'S-CoreDream-5Medium';
+    font-family: "SCDream3";
 }
 
 .footer-left {
@@ -21,21 +21,21 @@
 }
 
 .footer-text {
-    font-size : 10px;
+    font-size : 25px;
     margin-bottom: 0px;
 }
 
 
 .footer-head {
     font-family: "Abril Fatface";
-    font-size: 25px;
+    font-size: 35px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 .footer-contact {
     font-family: "Abril Fatface";
-    font-size: 18px;
+    font-size: 30px;
     margin-top: 0px;
     margin-bottom: 5px;
 }

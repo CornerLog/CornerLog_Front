@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from './Footer';
-import { Link, Outlet, Navlink } from 'react-router-dom';
+import { Link, Outlet, NavLink } from 'react-router-dom';
 import '../css/Menubar.css';
 
 const Menubar = () => {
@@ -12,8 +12,31 @@ const Menubar = () => {
                     <img className='nav-logo' alt="홈 아이콘" src="img/corner_logo_w.png" width="60px" height="60px"/>
                   </Link>
                 </div>
-                <ul className="right">
-                  activity       guestbook          contact //NavLink 추후 연결 예정
+                <ul className="nav-links">
+                <li>
+                  <NavLink
+                    to="/activity"
+                    className="nav-link"
+                  >
+                    Activity
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/guestbook"
+                    className="nav-link"
+                  >
+                    GuestBook
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/"
+                    className="nav-link"
+                  >
+                    Contact
+                  </NavLink>
+                </li>
                 </ul>
               </div>
 
@@ -21,7 +44,7 @@ const Menubar = () => {
                 <Outlet />
               </div>
               <div>
-                <Footer/> //Footer 확인용으로 임시 추가해 두었음
+                <Footer/>
               </div>
             </div>
         );

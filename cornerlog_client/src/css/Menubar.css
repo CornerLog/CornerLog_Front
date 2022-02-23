@@ -17,10 +17,6 @@
     padding-left: 30px;
 }
 
-.right {
-    padding-right: 30px;
-}
-
 .nav-logo {
     text-decoration: none;
     color: white;
@@ -29,6 +25,7 @@
 }
 
 .nav-links {
+    padding-right: 30px;
     display: grid;
     grid-template-columns: repeat(3,auto);
     grid-gap: 20px;
@@ -39,4 +36,11 @@
     text-decoration: none;
     color: #F7F5DD;
     transition: 0.3s;
+}
+
+.active {
+    font-family: "MADE Mirage Black";
+    color: #FFFFFF;
+    text-shadow : 3px 3px 6px #FFFFFF;  
+    text-decoration:underline;
 }
