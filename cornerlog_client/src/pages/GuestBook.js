@@ -9,7 +9,16 @@ const GuestBook = () => {
       <div className={guestbookst.left}>
         <GuestForm />
       </div>
-      <div className={guestbookst.right}>
+      <div className={guestbookst.right1}>
+        <GuestView />
+        <GuestView />
+        <GuestView />
+        <GuestView />
+      </div>
+      <div className={guestbookst.right2}>
+        <GuestView />
+        <GuestView />
+        <GuestView />
         <GuestView />
       </div>
     </div>

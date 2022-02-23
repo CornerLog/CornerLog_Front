@@ -1,8 +1,23 @@
 .body {
   background-image: url("../../public/img/guestbook_background.svg");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   height: 928px;
-  display: flex;
+  background-size: 928px;
+}
+
+.left {
+  float: left;
+  width: 700px;
+  height: 922px;
+}
+
+.right1 {
+  float: left;
+}
+
+.right2 {
+  float: left;
 }
 
 .form {
@@ -28,7 +43,7 @@
 .button {
   all: unset;
   position: relative;
-  top: 15%;
+  top: 18%;
   left: 20%;
   cursor: pointer;
 }
