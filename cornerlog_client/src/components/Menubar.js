@@ -9,12 +9,7 @@ const Menubar = () => {
               <div className="navbar">
                 <div className='left'>
                   <Link to="/">
-                    <img className='nav-logo'
-                      alt="홈 아이콘"
-                      src="img/corner_logo_w.png"
-                      width="60px"
-                      height="60px"
-                    />
+                    <img className='nav-logo' alt="홈 아이콘" src="img/corner_logo_w.png" width="60px" height="60px"/>
                   </Link>
                 </div>
                 <ul className="right">

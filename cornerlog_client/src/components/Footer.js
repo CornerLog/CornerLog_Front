@@ -21,34 +21,19 @@ const Footer = () => {
                 <ul>
                     <li>
                     <a href="https://www.instagram.com/cornerdswu">
-                        <img 
-                        alt="인스타그램"
-                        src="img/ig_w.png"
-                        width="30px"
-                        height="30px"
-                        />
+                        <img alt="인스타그램" src="img/ig_w.png" width="30px" height="30px"/>
                     </a>
                     </li>
 
                     <li>
                     <a href="https://corner-ds.tistory.com">
-                    <img 
-                      alt="티스토리"
-                      src="img/ti_w.png"
-                      width="30px"
-                      height="30px"
-                    />
+                    <img alt="티스토리" src="img/ti_w.png" width="30px" height="30px"/>
                     </a>
                     </li>
 
                     <li>
                     <a href="/contact">
-                    <img 
-                      alt="메일"
-                      src="img/mail_w.png"
-                      width="30px"
-                      height="30px"
-                    />
+                    <img alt="메일" src="img/mail_w.png" width="30px" height="30px"/>
                     </a>
                     </li>
                 </ul>

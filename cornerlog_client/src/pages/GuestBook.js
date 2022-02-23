@@ -1,7 +1,7 @@
 import React from "react";
 import guestbookst from "../css/GuestBook.module.css";
-import GuestForm from "./GuestForm";
-import GuestView from "./GuestView";
+import GuestForm from "../components/GuestForm";
+import GuestView from "../components/GuestView";
 
 const GuestBook = () => {
   return (
