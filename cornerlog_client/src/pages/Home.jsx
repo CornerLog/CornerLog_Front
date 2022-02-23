@@ -1,27 +1,99 @@
-import react from 'react';
+import react, { useState } from 'react';
 import styles from '../css/Home.module.css';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const Home = () =>{
-  return(
+const Home = () => {
+  const [rtlBoolean, setrtlBoolean] = useState(false);
+  const [speed, setSpeed] = useState(2000);
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: speed,
+    pauseOnHover: true,
+    centerPadding: "0px",
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    rtl: rtlBoolean,
+  };
+
+  function SampleNextArrow(props) {
+    const { className } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          display: "block",
+          opacity: "0",
+          height: "100%",
+          width: "20%",
+          right: "0",
+        }}
+        onMouseEnter={function (e) {
+          setrtlBoolean(false);
+          setSpeed(500);
+          console.log("next");
+        }}
+        onMouseLeave={function (e) {
+          setSpeed(2000);
+        }}
+      />
+    );
+  }
+  function SamplePrevArrow(props) {
+    const { className } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          display: "block",
+          opacity: "0",
+          height: "100%",
+          width: "20%",
+          left: "0",
+          zIndex: "999",
+        }}
+        onMouseEnter={function (e) {
+          setrtlBoolean(true);
+          setSpeed(500);
+          console.log("prev");
+        }}
+        onMouseLeave={function (e) {
+          setrtlBoolean(false);
+          setSpeed(2000);
+        }}
+      />
+    );
+  }
+
+  return (
     <div className={styles.home}>
       <div className={styles.top}>
-        <img className={styles.topImg} src="img/back_top.png" alt="top"/>
+        <img className={styles.topImg} src="img/back_top.png" alt="top" />
         <div className={styles.topBanner}>
-          <img src="img/banner_logo.png" alt="corner"/>
+          <img src="img/banner_logo.png" alt="corner" />
         </div>
-        <img className={styles.line} src="img/line.png" alt="line"/>
+        <img className={styles.line} src="img/line.png" alt="line" />
         <div className={styles.fancySentence}>
-          We're such a wonderful small group. We have two wonderful managers. I just want to go to sleep.<br/>
-          Shala, shala, shala. <br/>
-          We're such a wonderful small group. We have two wonderful managers. <br/> 
+          We're such a wonderful small group. We have two wonderful managers. I just want to go to sleep.<br />
+          Shala, shala, shala. <br />
+          We're such a wonderful small group. We have two wonderful managers. <br />
           I just want to go to sleep.Shala, shala, shala.
         </div>
-      <img className={styles.bottomImg} src="img/back_bottom.png" alt="back_bottom"/>
+        <img className={styles.bottomImg} src="img/back_bottom.png" alt="back_bottom" />
+
         <div className={styles.slideBack}>
-          <div className={styles.slideDiv}>
-            <div className={styles.slideItem}>이미지 슬라이드</div>
-            <div className={styles.slideItem}>이미지 슬라이드</div>
-            <div className={styles.slideItem}>이미지 슬라이드</div>
+          <div className={styles.slideWrap}>
+            <Slider {...settings}>
+              <div className={styles.slideItem}><img src="img/invisible1.png" /></div>
+              <div className={styles.slideItem}><img src="img/invisible2.png" /></div>
+              <div className={styles.slideItem}><img src="img/invisible1.png" /></div>
+              <div className={styles.slideItem}><img src="img/invisible2.png" /></div>
+            </Slider>
           </div>
         </div>
       </div>
@@ -31,28 +103,28 @@ const Home = () =>{
             <div className={styles.circle}>
               <img src="img/goal1.png" alt="이미지" />
             </div>
-            <p>GOAL 1<br/>Swag</p>
-            <p className={styles.introduce}>COOL GITHUB<br/>NEVER SLEEP</p>
+            <p>GOAL 1<br />Swag</p>
+            <p className={styles.introduce}>COOL GITHUB<br />NEVER SLEEP</p>
           </div>
           <div className={[styles.goalItem, styles.twoGoal].join(' ')}>
             <div className={styles.circle}>
               <img src="img/goal2.png" alt="이미지" />
             </div>
-            <p>GOAL 2<br/>Relationship</p>
-            <p className={styles.introduce}>Friendship with <br/>people in your major.</p>
+            <p>GOAL 2<br />Relationship</p>
+            <p className={styles.introduce}>Friendship with <br />people in your major.</p>
           </div>
           <div className={[styles.goalItem, styles.threeGoal].join(' ')}>
             <div className={styles.circle}>
               <img src="img/goal3.png" alt="이미지" />
             </div>
-            <p>GOAL 3<br/>Knowledge</p>
-            <p className={styles.introduce}>My Knowledge and <br/> my level are getting higher.</p>
+            <p>GOAL 3<br />Knowledge</p>
+            <p className={styles.introduce}>My Knowledge and <br /> my level are getting higher.</p>
           </div>
-        </div> 
+        </div>
       </div>
-      <img className={styles.backBottom1} src="img/back_bottom1.png"/>
+      <img className={styles.backBottom1} src="img/back_bottom1.png" />
       <div className={styles.backImg}>
-        <img className={styles.backBottom2} src="img/back_bottom2.png"/>
+        <img className={styles.backBottom2} src="img/back_bottom2.png" />
       </div>
     </div>
   )
