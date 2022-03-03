@@ -94,11 +94,20 @@
 .oneGoal {
   background-image: url("../../public/img/goalitem1.png");
 }
+.oneGoal:hover{
+  background-image:url("../../public/img/goalitem1_hover.png");
+}
 .twoGoal {
   background-image: url("../../public/img/goalitem2.png");
 }
+.twoGoal:hover {
+  background-image: url("../../public/img/goalitem2_hover.png");
+}
 .threeGoal {
   background-image: url("../../public/img/goalitem3.png");
+}
+.threeGoal:hover{
+  background-image: url("../../public/img/goalitem3_hover.png");
 }
 .goalItem {
   background-size: 100%;
