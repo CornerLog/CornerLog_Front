@@ -139,6 +139,9 @@ const ActivityPage = () => {
           :
           <div>글 목록 업로드 예정</div>
         }
+        <div className={styles.pagination}>
+          페이지네이션 추가 예정
+        </div>
       </section>
     </div>
   )

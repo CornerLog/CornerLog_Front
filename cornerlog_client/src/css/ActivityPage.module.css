@@ -20,7 +20,9 @@
 .Content {
   font-size: 16px;
   height:70%;
-  overflow: hidden;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  word-wrap:break-word;
 }
 /* StudyCardTitle css */
 .TitleBody{
@@ -80,6 +82,9 @@
 .BoardTitle{
   cursor:pointer;
 }
+.BoardTitle:hover{
+  color:#F36444;
+}
 
 .right{
   flex:3;
@@ -95,5 +100,7 @@
 .cardTitleList{
   grid-column: 1/span 2;
   width:80%;
-
+}
+.pagination{
+  grid-column: 1/span 2;
 }
