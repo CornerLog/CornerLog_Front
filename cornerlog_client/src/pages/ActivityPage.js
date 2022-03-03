@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import StudyCard from '../components/StudyCard';
+import StudyCardTitle from '../components/StudyCardTitle';
 import styles from '../css/ActivityPage.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 const ActivityPage = () => {
   const [category, setCategory] = useState("Corner");
   const [representImg, setRepresentImg] = useState();
+  const [color, setColor] = useState('red');
+
   const [data, setData] = useState([]);
   const [count, setCount] = useState(15);
   const [dataArray, setDataArray] = useState([]);
@@ -100,6 +103,18 @@ const ActivityPage = () => {
           </>
           :
           <div>스피너 업로드 예정</div>
+        }
+
+        {(dataArray.NodeJS?.length > 0) ?
+          <div className={styles.cardTitleList}>
+            <hr />
+            <StudyCardTitle data={dataArray.NodeJS[0]} />
+            <StudyCardTitle data={dataArray.NodeJS[1]} />
+            <StudyCardTitle data={dataArray.NodeJS[2]} />
+            <StudyCardTitle data={dataArray.NodeJS[3]} />
+          </div>
+          :
+          <div>글 목록 업로드 예정</div>
         }
       </section>
     </div>
