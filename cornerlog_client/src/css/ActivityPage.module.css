@@ -2,8 +2,8 @@
 .CardBlock {
   margin: 20px;
   display: flex;
-  width: 326px;
-  height: 332px;
+  width: 70%;
+  height: 80%;
   background-color: #FFCE6D;
   border-radius: 33px;
   flex-direction: column;
@@ -22,6 +22,31 @@
   height:70%;
   overflow: hidden;
 }
+/* StudyCardTitle css */
+.TitleBody{
+  background-color:#FFCE6D;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 33px;
+  padding:10px;
+  margin:5px;
+  padding-left:20px;
+  display:flex;
+  justify-content: space-between;
+}
+.TitleLink{
+  text-decoration: none;
+  color:#222222;
+}
+.TitleLink:hover{
+  color:#F36444;
+}
+.TitleBody p{
+  margin:0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 
 /* ActivityPage css */
 .body{
@@ -55,10 +80,20 @@
 .BoardTitle{
   cursor:pointer;
 }
+
 .right{
   flex:3;
   display:grid;
   grid-template-columns: 1fr 1fr;
   align-items:center;
   justify-items:center;
+  grid-template-rows:30% 30% 30%;
+  align-content:center;
+  
+}
+
+.cardTitleList{
+  grid-column: 1/span 2;
+  width:80%;
+
 }
