@@ -3,7 +3,7 @@
   margin: 20px;
   display: flex;
   width: 326px;
-  height: 100%;
+  height: 332px;
   background-color: #FFCE6D;
   border-radius: 33px;
   flex-direction: column;
@@ -19,9 +19,43 @@
 
 .Content {
   font-size: 16px;
+  height:70%;
+  overflow: hidden;
 }
 
 /* ActivityPage css */
-.body {
-    
+.body{
+  display: flex;
+  background-image:url("../../public/img/ActivityBack.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position:right;
+  height:100vh;
+}
+.left{
+  flex:2;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.representativeImg img{
+  width:300px;
+}
+.BoardTitleList{
+  padding:0px;
+  width:80%;
+}
+.BoardTitle{
+  display:flex;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+  margin:10px;
+}
+.right{
+  flex:3;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  align-items:center;
+  justify-items:center;
 }
