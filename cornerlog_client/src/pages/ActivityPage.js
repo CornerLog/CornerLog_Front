@@ -5,6 +5,8 @@ import styles from '../css/ActivityPage.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 const ActivityPage = () => {
+  const [category, setCategory] = useState("Corner");
+  const [representImg, setRepresentImg] = useState();
   const [data, setData] = useState([]);
   const [count, setCount] = useState(15);
   const [dataArray, setDataArray] = useState([]);
@@ -49,26 +51,43 @@ const ActivityPage = () => {
       "Corner": data.filter(data => data.categoryId === "1015293")
     };
     setDataArray(categoryList)
-
   }, [data])
 
   useEffect(() => {
     console.log(dataArray.Corner)
   }, [dataArray])
 
+  useEffect(() => {
+    console.log(category);
+    if (category === "Corner") {
+      setRepresentImg("img/corner_logo.png");
+    }
+    else if (category === "React Starter 1") {
+      setRepresentImg("img/rs1.jpg");
+    }
+    else if (category === "React Starter 2") {
+      setRepresentImg("img/rs2.jpg");
+    }
+    else if (category === "React Master") {
+      setRepresentImg("img/rm.jpg");
+    }
+    else if (category === "Node.js") {
+      setRepresentImg("img/nj.png");
+    }
+  }, [category])
 
   return (
     <div className={styles.body}>
       <section className={styles.left}>
         <div className={styles.representativeImg}>
-          <img src="img/corner_logo.png" />
+          <img src={representImg} />
         </div>
         <ul className={styles.BoardTitleList}>
-          <div className={styles.BoardTitle}><li>Corner</li><FontAwesomeIcon icon={faArrowRight} /></div>
-          <div className={styles.BoardTitle}><li>React Starter 1</li><FontAwesomeIcon icon={faArrowRight} /></div>
-          <div className={styles.BoardTitle}><li>React Starter 2</li><FontAwesomeIcon icon={faArrowRight} /></div>
-          <div className={styles.BoardTitle}><li>React Master</li><FontAwesomeIcon icon={faArrowRight} /></div>
-          <div className={styles.BoardTitle}><li>Node.js</li><FontAwesomeIcon icon={faArrowRight} /></div>
+          <div className={styles.BoardTitleDiv}><li className={styles.BoardTitle} onClick={() => setCategory("Corner")}>Corner</li><FontAwesomeIcon icon={faArrowRight} /></div>
+          <div className={styles.BoardTitleDiv}><li className={styles.BoardTitle} onClick={() => setCategory("React Starter 1")}>React Starter 1</li><FontAwesomeIcon icon={faArrowRight} /></div>
+          <div className={styles.BoardTitleDiv}><li className={styles.BoardTitle} onClick={() => setCategory("React Starter 2")}>React Starter 2</li><FontAwesomeIcon icon={faArrowRight} /></div>
+          <div className={styles.BoardTitleDiv}><li className={styles.BoardTitle} onClick={() => setCategory("React Master")}>React Master</li><FontAwesomeIcon icon={faArrowRight} /></div>
+          <div className={styles.BoardTitleDiv}><li className={styles.BoardTitle} onClick={() => setCategory("Node.js")}>Node.js</li><FontAwesomeIcon icon={faArrowRight} /></div>
         </ul>
       </section>
       <section className={styles.right}>
