@@ -8,8 +8,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 const ActivityPage = () => {
   const [category, setCategory] = useState("Corner");
   const [representImg, setRepresentImg] = useState();
-  const [color, setColor] = useState('red');
-
+  const [cDataArray, setcDataArray] = useState([]);
   const [data, setData] = useState([]);
   const [count, setCount] = useState(15);
   const [dataArray, setDataArray] = useState([]);
@@ -56,29 +55,53 @@ const ActivityPage = () => {
     setDataArray(categoryList)
   }, [data])
 
-  useEffect(() => {
-    console.log(dataArray.Corner)
-  }, [dataArray])
+  useEffect((category) => {
+    if (category === "Corner") {
+      setDataArray(dataArray.Corner)
+    }
+    console.log("dma", dataArray)
+  }, [category])
+
 
   useEffect(() => {
+    // 카테고리 별 대표이미지 변경
     console.log(category);
     if (category === "Corner") {
       setRepresentImg("img/corner_logo.png");
     }
-    else if (category === "React Starter 1") {
+    else if (category === "ReactStarter1") {
       setRepresentImg("img/rs1.jpg");
     }
-    else if (category === "React Starter 2") {
+    else if (category === "ReactStarter2") {
       setRepresentImg("img/rs2.jpg");
     }
-    else if (category === "React Master") {
+    else if (category === "ReactMaster") {
       setRepresentImg("img/rm.jpg");
     }
-    else if (category === "Node.js") {
+    else if (category === "NodeJS") {
       setRepresentImg("img/nj.png");
     }
   }, [category])
 
+  function CategoryData() {
+    // 카테고리 별 데이터를 목록에 불러오기 위해
+    // 해당 카테고리 데이터 반환
+    if (category === "Corner") {
+      return dataArray.Corner;
+    }
+    else if (category === "ReactStarter1") {
+      return dataArray.ReactStarter1;
+    }
+    else if (category === "ReactStarter2") {
+      return dataArray.ReactStarter2;
+    }
+    else if (category === "ReactMaster") {
+      return dataArray.ReactMaster;
+    }
+    else if (category === "NodeJS") {
+      return dataArray.NodeJS;
+    }
+  }
   return (
     <div className={styles.body}>
       <section className={styles.left}>
@@ -87,31 +110,31 @@ const ActivityPage = () => {
         </div>
         <ul className={styles.BoardTitleList}>
           <div className={styles.BoardTitleDiv}><li className={styles.BoardTitle} onClick={() => setCategory("Corner")}>Corner</li><FontAwesomeIcon icon={faArrowRight} /></div>
-          <div className={styles.BoardTitleDiv}><li className={styles.BoardTitle} onClick={() => setCategory("React Starter 1")}>React Starter 1</li><FontAwesomeIcon icon={faArrowRight} /></div>
-          <div className={styles.BoardTitleDiv}><li className={styles.BoardTitle} onClick={() => setCategory("React Starter 2")}>React Starter 2</li><FontAwesomeIcon icon={faArrowRight} /></div>
-          <div className={styles.BoardTitleDiv}><li className={styles.BoardTitle} onClick={() => setCategory("React Master")}>React Master</li><FontAwesomeIcon icon={faArrowRight} /></div>
-          <div className={styles.BoardTitleDiv}><li className={styles.BoardTitle} onClick={() => setCategory("Node.js")}>Node.js</li><FontAwesomeIcon icon={faArrowRight} /></div>
+          <div className={styles.BoardTitleDiv}><li className={styles.BoardTitle} onClick={() => setCategory("ReactStarter1")}>React Starter 1</li><FontAwesomeIcon icon={faArrowRight} /></div>
+          <div className={styles.BoardTitleDiv}><li className={styles.BoardTitle} onClick={() => setCategory("ReactStarter2")}>React Starter 2</li><FontAwesomeIcon icon={faArrowRight} /></div>
+          <div className={styles.BoardTitleDiv}><li className={styles.BoardTitle} onClick={() => setCategory("ReactMaster")}>React Master</li><FontAwesomeIcon icon={faArrowRight} /></div>
+          <div className={styles.BoardTitleDiv}><li className={styles.BoardTitle} onClick={() => setCategory("NodeJS")}>Node.js</li><FontAwesomeIcon icon={faArrowRight} /></div>
         </ul>
       </section>
       <section className={styles.right}>
-        {(dataArray.NodeJS?.length > 0) ?
+        {(CategoryData()?.length > 0) ?
           <>
-            <StudyCard data={dataArray.NodeJS[0]}></StudyCard>
-            <StudyCard data={dataArray.NodeJS[1]}></StudyCard>
-            <StudyCard data={dataArray.NodeJS[2]}></StudyCard>
-            <StudyCard data={dataArray.NodeJS[3]}></StudyCard>
+            <StudyCard data={CategoryData()[CategoryData().length - 1]}></StudyCard>
+            <StudyCard data={CategoryData()[CategoryData().length - 2]}></StudyCard>
+            <StudyCard data={CategoryData()[CategoryData().length - 3]}></StudyCard>
+            <StudyCard data={CategoryData()[CategoryData().length - 4]}></StudyCard>
           </>
           :
-          <div>스피너 업로드 예정</div>
+          <div>dataArray.{category}스피너 업로드 예정</div>
         }
 
-        {(dataArray.NodeJS?.length > 0) ?
+        {(CategoryData()?.length > 0) ?
           <div className={styles.cardTitleList}>
             <hr />
-            <StudyCardTitle data={dataArray.NodeJS[0]} />
-            <StudyCardTitle data={dataArray.NodeJS[1]} />
-            <StudyCardTitle data={dataArray.NodeJS[2]} />
-            <StudyCardTitle data={dataArray.NodeJS[3]} />
+            <StudyCardTitle data={CategoryData()[CategoryData().length - 1]} />
+            <StudyCardTitle data={CategoryData()[CategoryData().length - 2]} />
+            <StudyCardTitle data={CategoryData()[CategoryData().length - 3]} />
+            <StudyCardTitle data={CategoryData()[CategoryData().length - 4]} />
           </div>
           :
           <div>글 목록 업로드 예정</div>

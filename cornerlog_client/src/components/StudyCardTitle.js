@@ -5,7 +5,11 @@ const StudyCardTitle = ({ data }) => {
 
   return (
     <div className={styles.TitleBody}>
-      <p>{data.title}</p>
+      <p>
+        <a href={data.postUrl} className={styles.TitleLink} target="_blank">
+          {data.title}
+        </a>
+      </p>
       <p>{data.date.substr(0, 10)}</p>
     </div>
   )

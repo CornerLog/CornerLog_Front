@@ -33,9 +33,20 @@
   display:flex;
   justify-content: space-between;
 }
+.TitleLink{
+  text-decoration: none;
+  color:#222222;
+}
+.TitleLink:hover{
+  color:#F36444;
+}
 .TitleBody p{
   margin:0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
+
 
 /* ActivityPage css */
 .body{
