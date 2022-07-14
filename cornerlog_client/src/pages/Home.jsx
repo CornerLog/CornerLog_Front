@@ -79,10 +79,11 @@ const Home = () => {
         </div>
         <img className={styles.line} src="img/line.png" alt="line" />
         <div className={styles.fancySentence}>
-          We're such a wonderful small group. We have two wonderful managers. I just want to go to sleep.<br />
-          Shala, shala, shala. <br />
-          We're such a wonderful small group. We have two wonderful managers. <br />
-          I just want to go to sleep.Shala, shala, shala.
+        Hello, we are the development club of Duksung Women's University majoring in computer engineering. <br/>
+        Corner was created for the development of our major.<br/>
+        The goal is to activate exchanges between seniors and juniors, activate additional learning outside the curriculum, and provide guidelines to other students.<br/>
+        Various events are held on a yearly basis, and curriculum, learning, and project once are required.<br/>
+        Please pay a lot of attention to Corner.
         </div>
         <img className={styles.bottomImg} src="img/back_bottom.png" alt="back_bottom" />
 

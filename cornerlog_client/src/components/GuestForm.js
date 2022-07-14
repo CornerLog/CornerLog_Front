@@ -9,20 +9,23 @@ const GuestForm = () => {
   return (
     <>
       <form className={guestbookst.form}>
+        <div className={guestbookst.redbox}>
+        📌공사 중입니다📌
+        </div>
         <div className={guestbookst.formTop}>
           <div className={guestbookst.formName}>
-            <label for="name">Name</label>
+            <label htmlFor="name">Name</label>
             <br />
-            <input id="name" name="name" type="text" placeholder="Name"></input>
+            <input id="name" name="name" type="text" placeholder="Name" disabled></input>
           </div>
           <div>
-            <label for="pw">Password</label>
+            <label htmlFor="pw">Password</label>
             <br />
-            <input id="pw" name="pw" type="password" placeholder="****"></input>
+            <input id="pw" name="pw" type="password" placeholder="****" disabled></input>
           </div>
         </div>
         <div className={guestbookst.formBottom}>
-          <label for="content">Content</label>
+          <label htmlFor="content">Content</label>
           <br />
           <textarea
             name="content"
@@ -30,7 +33,7 @@ const GuestForm = () => {
             cols="45"
             rows="12"
             placeholder="내용을 입력하세요."
-          ></textarea>
+            disabled></textarea>
         </div>
       </form>
       <button type="submit" className={guestbookst.button}>
