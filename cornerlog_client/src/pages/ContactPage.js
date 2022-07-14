@@ -29,9 +29,9 @@ const Contact = () => {
             <form ref={form} onSubmit={sendEmail}>
                 <div className={contactpagest.field1}>
                 <label>Name</label>
-                <input type="text" name="user_name" />
+                <input type="text" name="name" />
                 <label>Email</label>
-                <input type="email" name="user_email" />
+                <input type="email" name="email" />
                 <label>Message</label>
                 <textarea name="message" />
                 </div>

@@ -14,18 +14,18 @@ const GuestForm = () => {
         </div>
         <div className={guestbookst.formTop}>
           <div className={guestbookst.formName}>
-            <label for="name">Name</label>
+            <label htmlFor="name">Name</label>
             <br />
             <input id="name" name="name" type="text" placeholder="Name" disabled></input>
           </div>
           <div>
-            <label for="pw">Password</label>
+            <label htmlFor="pw">Password</label>
             <br />
             <input id="pw" name="pw" type="password" placeholder="****" disabled></input>
           </div>
         </div>
         <div className={guestbookst.formBottom}>
-          <label for="content">Content</label>
+          <label htmlFor="content">Content</label>
           <br />
           <textarea
             name="content"

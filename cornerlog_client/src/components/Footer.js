@@ -10,11 +10,11 @@ const Footer = () => {
         <div className="footer-left">
             <p className='footer-head'>Corner </p>
             <p>덕성여자대학교 컴퓨터공학전공 소모임 코너 <br />
-            많은 관심과 사랑 부탁 <br />
-            지원 관련 문의는 Contact Us 참고해 주세요 <br />
-            Thank You</p>
+            1기 운영진 : Poro PeeP Muji 리마 <br />
+            2기 운영진 : Poro PeeP YUZ OJO 알밤 <br />
+            2기 모집 : To be Continue</p>
         </div>
-        <div class="footer-right">
+        <div className="footer-right">
         <ul>
             <p className='footer-text'>We'll Be Glad To Help </p>
             <li><p className='footer-contact'>CONTACT US </p></li>
