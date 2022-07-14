@@ -23,7 +23,7 @@
     "dev": "next dev",
     "lint": "next lint",
     "start": "react-scripts start",
-    "build": "next build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build"
@@ -46,7 +46,7 @@
       "last 1 safari version"
     ]
   },
-  "engine": {
+  "engines": {
     "node": "16.8.0",
     "npm": "8.3.0"
   }
