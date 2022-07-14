@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import GuestBook from "./pages/GuestBook";
 import ActivityPage from "./pages/ActivityPage";
 import { Routes, Route } from "react-router-dom";
+import Contact from './pages/ContactPage';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route index element={<Home />}></Route>
           <Route path="/guestbook" element={<GuestBook />}></Route>
           <Route path="/activity" element={<ActivityPage />}/>
+          <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
     </>
