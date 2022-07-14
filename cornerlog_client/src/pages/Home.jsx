@@ -1,5 +1,5 @@
-import react, { useState } from 'react';
-import styles from '../css/Home.module.css';
+import react, { useState } from "react";
+import styles from "../css/Home.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -79,47 +79,90 @@ const Home = () => {
         </div>
         <img className={styles.line} src="img/line.png" alt="line" />
         <div className={styles.fancySentence}>
-        Hello, we are the development club of Duksung Women's University majoring in computer engineering. <br/>
-        Corner was created for the development of our major.<br/>
-        The goal is to activate exchanges between seniors and juniors, activate additional learning outside the curriculum, and provide guidelines to other students.<br/>
-        Various events are held on a yearly basis, and curriculum, learning, and project once are required.<br/>
-        Please pay a lot of attention to Corner.
+          Hello, we are the development club of Duksung Women's University
+          majoring in computer engineering. <br />
+          Corner was created for the development of our major.
+          <br />
+          The goal is to activate exchanges between seniors and juniors,
+          activate additional learning outside the curriculum, and provide
+          guidelines to other students.
+          <br />
+          Various events are held on a yearly basis, and curriculum, learning,
+          and project once are required.
+          <br />
+          Please pay a lot of attention to Corner.
         </div>
-        <img className={styles.bottomImg} src="img/back_bottom.png" alt="back_bottom" />
+        <img
+          className={styles.bottomImg}
+          src="img/back_bottom.png"
+          alt="back_bottom"
+        />
 
         <div className={styles.slideBack}>
           <div className={styles.slideWrap}>
             <Slider {...settings}>
-              <div className={styles.slideItem}><img src="img/invisible1.png" /></div>
-              <div className={styles.slideItem}><img src="img/invisible2.png" /></div>
-              <div className={styles.slideItem}><img src="img/invisible1.png" /></div>
-              <div className={styles.slideItem}><img src="img/invisible2.png" /></div>
+              <div className={styles.slideItem}>
+                <img src="img/invisible1.png" />
+              </div>
+              <div className={styles.slideItem}>
+                <img src="img/invisible2.png" />
+              </div>
+              <div className={styles.slideItem}>
+                <img src="img/invisible3.png" />
+              </div>
+              <div className={styles.slideItem}>
+                <img src="img/invisible1.png" />
+              </div>
+              <div className={styles.slideItem}>
+                <img src="img/invisible2.png" />
+              </div>
+              <div className={styles.slideItem}>
+                <img src="img/invisible3.png" />
+              </div>
             </Slider>
           </div>
         </div>
       </div>
       <div className={styles.bottom}>
         <div className={styles.goalDiv}>
-          <div className={[styles.goalItem, styles.oneGoal].join(' ')}>
+          <div className={[styles.goalItem, styles.oneGoal].join(" ")}>
             <div className={styles.circle}>
               <img src="img/goal1.png" alt="이미지" />
             </div>
-            <p>GOAL 1<br />Swag</p>
-            <p className={styles.introduce}>COOL GITHUB<br />NEVER SLEEP</p>
+            <p>
+              GOAL 1<br />
+              Achievement
+            </p>
+            <p className={styles.introduce}>
+              COOL GITHUB
+              <br />
+              NEVER SLEEP
+            </p>
           </div>
-          <div className={[styles.goalItem, styles.twoGoal].join(' ')}>
+          <div className={[styles.goalItem, styles.twoGoal].join(" ")}>
             <div className={styles.circle}>
               <img src="img/goal2.png" alt="이미지" />
             </div>
-            <p>GOAL 2<br />Relationship</p>
-            <p className={styles.introduce}>Friendship with <br />people in your major.</p>
+            <p>
+              GOAL 2<br />
+              Cooperation
+            </p>
+            <p className={styles.introduce}>
+              Building relationship with <br />
+              people in your major.
+            </p>
           </div>
-          <div className={[styles.goalItem, styles.threeGoal].join(' ')}>
+          <div className={[styles.goalItem, styles.threeGoal].join(" ")}>
             <div className={styles.circle}>
               <img src="img/goal3.png" alt="이미지" />
             </div>
-            <p>GOAL 3<br />Knowledge</p>
-            <p className={styles.introduce}>My Knowledge and <br /> my level are getting higher.</p>
+            <p>
+              GOAL 3<br />
+              Knowledge
+            </p>
+            <p className={styles.introduce}>
+              Conduct an overall <br /> study of the web.
+            </p>
           </div>
         </div>
       </div>
@@ -128,7 +171,7 @@ const Home = () => {
         <img className={styles.backBottom2} src="img/back_bottom2.png" />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Home;

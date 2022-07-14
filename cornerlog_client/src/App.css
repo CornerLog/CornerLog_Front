@@ -46,3 +46,8 @@
   font-weight: 900;
   src: url(font/SCDream9.otf);
 }
+
+@font-face {
+  font-family: "AbrilFatface";
+  src: url(font/AbrilFatface-Regular.ttf);
+}

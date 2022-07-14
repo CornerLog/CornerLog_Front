@@ -135,7 +135,6 @@ const ActivityPage = () => {
   }, [category, dataArray]);
 
   useEffect(() => {
-    console.log(result);
     if (result && result.length && result[result.length - 1].content) {
       setSpinner(false);
     }
@@ -215,7 +214,7 @@ const ActivityPage = () => {
         ) : (
           <div></div>
         )}
-        <div className={styles.pagination}>=</div>
+        <div className={styles.pagination}></div>
       </section>
     </div>
   );
