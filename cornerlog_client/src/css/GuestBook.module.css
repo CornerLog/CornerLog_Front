@@ -2,7 +2,7 @@
   background-image: url("../../public/img/guestbook_background.svg");
   background-attachment: fixed;
   background-repeat: no-repeat;
-  height: 928px;
+  height: 960px;
   background-size: 928px;
 }
 
@@ -121,6 +121,7 @@
   font-size: 16px;
   padding: 20px 20px 30px 20px;
   border-radius: 30px;
+  margin: 10px;
 }
 
 .cardtitle {
@@ -132,4 +133,20 @@
 .cardcontent {
   color: #e6e6e6;
   font-family: "SCDream4";
+}
+
+.redbox {
+  background-color: #b82200;
+  color: #FFFFFF;
+  height: fit-content;
+  width: fit-content;
+  z-index: 2;
+  position: absolute;
+  text-align: center;
+  right: 100px;
+  top: 225px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 100px;
+  padding-left:100px;
 }

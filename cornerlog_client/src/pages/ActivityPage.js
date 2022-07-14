@@ -79,7 +79,7 @@ const ActivityPage = () => {
       setRepresentImg("img/rm.jpg");
     }
     else if (category === "NodeJS") {
-      setRepresentImg("img/nj.jpg");
+      setRepresentImg("img/nj.png");
     }
   }, [category])
 
