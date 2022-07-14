@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+
+.footer {
+  background: #73160e;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  font-size: 15px;
+  color: #ffffff;
+  justify-content: space-between;
+  align-content: center;
+  font-family: "SCDream3";
+}
+
+.footer-left {
+  padding-left: 30px;
+}
+
+.footer-right {
+  display: flex;
+  text-align: right;
+  padding-right: 30px;
+}
+
+.footer-text {
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+
+.footer-head {
+  font-family: "AbrilFatface";
+  font-size: 35px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.footer-contact {
+  font-family: "AbrilFatface";
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  margin-right: 0px;
+}
