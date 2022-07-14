@@ -4,7 +4,7 @@
   display: flex;
   width: 70%;
   height: 80%;
-  background-color: #FFCE6D;
+  background-color: #ffce6d;
   border-radius: 33px;
   flex-direction: column;
   padding: 20px 20px 30px 20px;
@@ -12,95 +12,99 @@
 }
 
 .HeadingText {
-  color:#222222;
+  color: #222222;
+  font-family: "SCDream7";
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .Content {
-  font-size: 16px;
-  height:70%;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  word-wrap:break-word;
+  font-size: 18px;
+  font-family: "SCDream4";
+  height: 70%;
+  overflow: hidden;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
 }
 /* StudyCardTitle css */
-.TitleBody{
-  background-color:#FFCE6D;
+.TitleBody {
+  background-color: #ffce6d;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 33px;
-  padding:10px;
-  margin:5px;
-  padding-left:20px;
-  display:flex;
+  padding: 10px;
+  margin: 5px;
+  padding-left: 20px;
+  display: flex;
   justify-content: space-between;
 }
-.TitleLink{
+.TitleLink {
   text-decoration: none;
-  color:#222222;
+  font-size: 18px;
+  font-family: "SCDream4";
+  color: #222222;
 }
-.TitleLink:hover{
-  color:#F36444;
+.TitleLink:hover {
+  color: #f36444;
 }
-.TitleBody p{
-  margin:0;
+.TitleBody p {
+  margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-
 /* ActivityPage css */
-.body{
+.body {
   display: flex;
-  background-image:url("../../public/img/ActivityBack.png");
+  background-image: url("../../public/img/ActivityBack.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position:right;
-  height:100vh;
+  background-position: right;
+  height: 100vh;
 }
-.left{
-  flex:2;
-  display:flex;
+.left {
+  flex: 2;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.representativeImg img{
-  width:300px;
+.representativeImg img {
+  width: 300px;
 }
-.BoardTitleList{
-  padding:0px;
-  width:80%;
+.BoardTitleList {
+  padding: 0px;
+  width: 80%;
 }
-.BoardTitleDiv{
-  display:flex;
+.BoardTitleDiv {
+  display: flex;
   justify-content: space-between;
   border-bottom: 1px solid;
-  margin:10px;
+  margin: 10px;
 }
-.BoardTitle{
-  cursor:pointer;
+.BoardTitle {
+  cursor: pointer;
 }
-.BoardTitle:hover{
-  color:#F36444;
+.BoardTitle:hover {
+  color: #f36444;
 }
 
-.right{
-  flex:3;
-  display:grid;
+.right {
+  flex: 3;
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items:center;
-  justify-items:center;
-  grid-template-rows:30% 30% 30%;
-  align-content:center;
-  
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: 30% 30% 30%;
+  align-content: center;
 }
 
-.cardTitleList{
-  grid-column: 1/span 2;
-  width:80%;
+.cardTitleList {
+  grid-column: 1 / span 2;
+  width: 80%;
 }
-.pagination{
-  grid-column: 1/span 2;
+.pagination {
+  grid-column: 1 / span 2;
 }
