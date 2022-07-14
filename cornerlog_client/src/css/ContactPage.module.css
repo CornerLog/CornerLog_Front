@@ -1,0 +1,57 @@
+.formbox{
+    height: 750px;
+    margin: 0vw;
+    padding-left: 30px;
+    padding-right: 50px;
+    font-family: "SCDream3";
+    text-align: center;
+}
+
+.formbox h5{
+    font-size: 35px ;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 30px;
+    font-family: "SCDream7";
+}
+
+
+.formbox label{
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 0 2vh 0;
+}
+
+.formbox input, textarea{
+    width: 60%;
+    padding: .5rem .8rem .5rem .8rem;
+    margin: .9vw 0 ;
+    background-color: #FF6F61;
+    border: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    align-items: center;
+}
+
+.formbox textarea{
+    height: 15vh;
+}
+
+.submitBtn{
+    display: inline-block;
+    width: 30%;
+    height: 2rem;
+    color: #FFFFFF;
+    background-color: #EE4939;
+    border: 0;
+    bottom: 0;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 1rem 0 1rem 0;
+}
+
+.submitBtn:hover{
+    background-color: #73160E;
+    transition: 1s background ease;
+}
