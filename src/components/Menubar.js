@@ -1,7 +1,7 @@
 import React, {useCallback, useState} from 'react';
 import Footer from './Footer';
 import { Link, Outlet, NavLink } from 'react-router-dom';
-import styles from '../css/Menubar.css';
+import styles from '../css/Menubar.module.css';
 
 const Menubar = () => {
     // 메뉴 열림,닫힘 상태
@@ -15,17 +15,17 @@ const Menubar = () => {
     });
         return (
             <div>
-              <div className="navbar">
-                <div className='left'>
+              <div className={styles.navbar}>
+                <div className={styles.left}>
                   <Link to="/">
-                    <img className='nav-logo' alt="홈 아이콘" src="img/corner_logo_w.png" width="60px" height="60px"/>
+                    <img className={styles.navLogo} alt="홈 아이콘" src="img/corner_logo_w.png" width="60px" height="60px"/>
                   </Link>
                 </div>
-                <ul className="nav-links">
+                <ul className={styles.navLinks}>
                 <li>
                   <NavLink
                     to="/activity"
-                    className="nav-link"
+                    className={styles.navLink}
                   >
                     Activity
                   </NavLink>
@@ -33,7 +33,7 @@ const Menubar = () => {
                 <li>
                   <NavLink
                     to="/guestbook"
-                    className="nav-link"
+                    className={styles.navLink}
                   >
                     GuestBook
                   </NavLink>
@@ -41,7 +41,7 @@ const Menubar = () => {
                 <li>
                   <NavLink
                     to="/contact"
-                    className="nav-link"
+                    className={styles.navLink}
                   >
                     Contact
                   </NavLink>
@@ -50,18 +50,51 @@ const Menubar = () => {
                 <div
               className={
                 menuActive
-                  ? "hamburger" + " " + "active"
-                  : "hamburger"
+                  ? styles.hamburger + " " + styles.active
+                  : styles.hamburger
               }
               
               onClick={MenuStateHandle}
             >
-              <span className="bar"></span>
-              <span className="bar"></span>
-              <span className="bar"></span>
+              <span className={styles.bar}></span>
+              <span className={styles.bar}></span>
+              <span className={styles.bar}></span>
             </div>
               </div>
+              
+              <div className={styles.HeaderBottom}>
+              <ul className={menuActive ? styles.NavMenuActive : styles.NavMenu}>
+              <NavLink
+                to="/activity"
+                className={({ isActive }) =>
+                  isActive ? styles.navActive : styles.nav
+                }
+                onClick={menuClose}
+              >
+                <li className={styles.NavItem}>Activity</li>
+              </NavLink>
+              <NavLink
+                to="/guestbook"
+                className={({ isActive }) =>
+                  isActive ? styles.navActive : styles.nav
+                }
+                onClick={menuClose}
+              >
+                <li className={styles.NavItem}>GuestBook</li>
+              </NavLink>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? styles.navActive : styles.nav
+                }
+                onClick={menuClose}
+              >
+                <li className={styles.NavItem}>Contact</li>
+              </NavLink>
 
+            </ul>
+              </div>
+              
               <div>
                 <Outlet />
               </div>
