@@ -2,7 +2,8 @@
   background-image: url("../../public/img/guestbook_background.svg");
   background-attachment: fixed;
   background-repeat: no-repeat;
-  height: 960px;
+  /* height: 960px; */
+  display: flex;
   background-size: 928px;
 }
 
@@ -29,6 +30,7 @@
   top: 10%;
   left: 10%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-right:70px;
 }
 
 .form::before {
@@ -117,7 +119,8 @@
 }
 
 .card {
-  width: 326px;
+  /* width: 326px; */
+  width:20vw;
   background: #f36444;
   font-size: 16px;
   padding: 20px 20px 30px 20px;
@@ -150,4 +153,59 @@
   padding-bottom: 30px;
   padding-right: 100px;
   padding-left:100px;
+}
+
+/* 태블릿 및 모바일용 CSS */
+@media all and (max-width:768px){
+  .body{
+    background-image: none;
+    background-color:#FFCE6D;
+    display: flex;
+    flex-direction: column;
+    height:100%;
+  }
+  .left{
+    float:none;
+    width:100%;
+  }
+
+  .form{
+    width:80vw;
+    height:55%;
+  }
+  .formTop{
+    width:50vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .formName input, .formPassword input{
+    width:60vw;
+    margin-bottom: 10px;
+  }
+  .formBottom textarea{
+    height:20vw;
+  }
+  .redbox{
+    right: 5vw;
+    top: 30vw;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 100px;
+    padding-left:100px;
+  }
+  .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card{
+    /* width:60%; */
+    width:70vw;
+  }
+  .right1, .right2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float:none;
+  }
 }

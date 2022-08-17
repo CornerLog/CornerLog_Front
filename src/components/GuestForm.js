@@ -18,7 +18,7 @@ const GuestForm = () => {
             <br />
             <input id="name" name="name" type="text" placeholder="Name" disabled></input>
           </div>
-          <div>
+          <div className={guestbookst.formPassword}>
             <label htmlFor="pw">Password</label>
             <br />
             <input id="pw" name="pw" type="password" placeholder="****" disabled></input>

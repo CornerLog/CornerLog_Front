@@ -18,7 +18,7 @@
 }
 
 .footer-right {
-  display: flex;
+  /* display: flex; */
   text-align: right;
   padding-right: 30px;
 }
@@ -49,4 +49,24 @@ ul {
 li {
   display: inline-block;
   margin-right: 0px;
+}
+
+/* 태블릿 및 모바일용 CSS */
+@media all and (max-width:768px){
+  .footer{
+    font-size:13px;
+    flex-direction: column;
+    
+  }
+  .footer-text{
+    font-size:20px;
+  }
+
+  .footer-contact{
+    font-size:35px;
+    
+  }
+
+
+
 }

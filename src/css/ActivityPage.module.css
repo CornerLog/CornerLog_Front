@@ -108,3 +108,20 @@
 .pagination {
   grid-column: 1 / span 2;
 }
+
+/* 태블릿 및 모바일용 CSS */
+@media all and (max-width:768px){
+  .body{
+    display: flex;
+    flex-direction: column;
+    background-image: none;
+  }
+  .left{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .representativeImg img {
+    width: 250px;    
+  }
+
+}
