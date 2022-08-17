@@ -20,7 +20,19 @@ const Home = () => {
     prevArrow: <SamplePrevArrow />,
     rtl: rtlBoolean,
   };
-
+  const settings_mobile = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: speed,
+    pauseOnHover: true,
+    centerPadding: "0px",
+    // nextArrow: <SampleNextArrow />,
+    // prevArrow: <SamplePrevArrow />,
+    rtl: rtlBoolean,
+  };
   function SampleNextArrow(props) {
     const { className } = props;
     return (
@@ -101,6 +113,28 @@ const Home = () => {
         <div className={styles.slideBack}>
           <div className={styles.slideWrap}>
             <Slider {...settings}>
+              <div className={styles.slideItem}>
+                <img src="img/invisible1.png" />
+              </div>
+              <div className={styles.slideItem}>
+                <img src="img/invisible2.png" />
+              </div>
+              <div className={styles.slideItem}>
+                <img src="img/invisible3.png" />
+              </div>
+              <div className={styles.slideItem}>
+                <img src="img/invisible1.png" />
+              </div>
+              <div className={styles.slideItem}>
+                <img src="img/invisible2.png" />
+              </div>
+              <div className={styles.slideItem}>
+                <img src="img/invisible3.png" />
+              </div>
+            </Slider>
+          </div>
+          <div className={styles.slideWrap_mobile}>
+            <Slider {...settings_mobile}>
               <div className={styles.slideItem}>
                 <img src="img/invisible1.png" />
               </div>

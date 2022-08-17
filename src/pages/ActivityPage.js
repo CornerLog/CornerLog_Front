@@ -214,6 +214,7 @@ const ActivityPage = () => {
         ) : (
           <div></div>
         )}
+        <a href="https://corner-ds.tistory.com/" target="_blank" className={styles.CornerLink}>더 많은 게시글이 궁금하다면? Corner로 바로가기🥥</a>
         <div className={styles.pagination}></div>
       </section>
     </div>

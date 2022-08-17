@@ -3,7 +3,7 @@
 .body {
   display: flex;
 }
-
+ 
 .left {
   background-color: blanchedalmond;
 }
@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} 
 .topImg {
   width: 100%;
 }
@@ -50,6 +50,10 @@
   width:80%;
   margin:0 auto;
   background-color: #FC6557;
+  display:block;
+}
+.slideWrap_mobile{
+  display:none;
 }
 .bottomImg {
   width: 100%;
@@ -168,4 +172,38 @@
 .backBottom2 {
   z-index: 2;
   bottom: 0;
+}
+/* 태블릿 및 모바일용 CSS */
+@media all and (max-width:768px){
+  .topImg{
+    display: none;
+  }
+  .topBanner{
+    margin-top:30px;
+  }
+  .slideWrap{
+    display: none;
+  }
+  .slideWrap_mobile{
+    display: block; 
+  }
+  .slideItem img{
+    width:60vw;
+    height:45vw;
+    margin:0 auto;
+    border:10px solid #ffffff;
+  }
+  .goalDiv{
+    flex-direction: column;
+    align-items:center;
+    
+  }
+  .goalItem {
+    background-image : none;
+    margin-top:20px;
+  }
+  .goalItem:hover{
+    background-image : none;
+  }
+
 }

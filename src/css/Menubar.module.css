@@ -1,0 +1,154 @@
+@font-face {
+    font-family: "MADE Mirage Regular";
+    src: url("../font/MADE Mirage Regular.otf");
+}
+@font-face {
+    font-family: "MADE Mirage Black";
+    src: url("../font/MADE Mirage Black.otf");
+}
+
+.navbar {
+    background: linear-gradient( to right, #DB3655, #D95770 );
+    height: 80px;
+    width: 100%;
+    display: flex;
+    font-size: 24px;
+    color: #F7F5DD;
+    justify-content: space-between;
+    align-content: center;
+    font-family: "MADE Mirage Regular";
+}
+.hamburger{
+    display: none;
+}
+.left{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding-left: 30px;
+}
+
+.navLogo {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    margin-top: 10px;
+}
+
+.navLinks {
+    padding-right: 30px;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-gap: 20px;
+    list-style: none;
+}
+
+.navLink {
+    text-decoration: none;
+    color: #F7F5DD;
+    transition: 0.3s;
+}
+
+.active {
+    font-family: "MADE Mirage Black";
+    color: #FFFFFF;
+    text-shadow : 3px 3px 6px #FFFFFF;  
+    text-decoration:underline;
+}
+.HeaderBottom{
+  display: none;
+}
+/* 태블릿 및 모바일용 CSS */
+@media all and (max-width:768px){
+    .navLinks{
+        display:none;
+    }
+    .bar {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 6px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #FFFFFF;
+      }
+      .hamburger {
+        display: block;
+        width: 60px;
+        padding-top: 20px;
+        padding-bottom: 8px;
+        padding-right: 10px;
+      }
+      .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+      }
+      .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+      .menubar {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .MenuBtn {
+        width: 24px;
+        height: 20px;
+        padding: 13px;
+        /* background-color: aqua; */
+      }
+      .NavMenu {
+        display: none;
+      }
+      .NavMenuActive {
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding-top: 26px;
+        padding-bottom: 26px;
+        box-shadow: 0px 4px 2px -2px rgba(219, 219, 219, 0.25);
+        background-color: #D95770;
+        margin-top:0px;
+        margin-bottom:0px;
+        animation: fadeInDown 0.5s;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translate3d(0, -10%, 0);
+        }
+      
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      .HeaderBottom{
+        display: block;
+      }
+
+      
+      .NavItem {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-left: 34px;
+        font-family: "MADE Mirage Regular";
+        font-size: 25px;
+        line-height: 24px;
+      }
+
+      .nav {
+        color: #fff;
+        text-decoration: none;
+      }
+      .navActive {
+        color: #FFCE6D !important;
+        text-decoration: none;
+      }
+  }

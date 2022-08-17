@@ -9,6 +9,7 @@ const GuestBook = () => {
       <div className={guestbookst.left}>
         <GuestForm />
       </div>
+      <div className={guestbookst.right}>
       <div className={guestbookst.right1}>
         <GuestView
           name="PORO"
@@ -45,6 +46,8 @@ const GuestBook = () => {
           content="코코넛은 코너 소속원들의 애칭이랍니다! 코너 2기 소속원이 된다면 당신도 코코넛이 될 수 있는 특별한 찬 -- 스 💖 컴퓨터공학전공의 유일무이 개발 소모임 코너에서 여러분과 함께하고 싶어요! 2기에 함께해 주실 거죠?"
         />
       </div>
+      </div>
+
     </div>
   );
 };
