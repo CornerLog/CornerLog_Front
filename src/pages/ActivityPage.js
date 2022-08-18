@@ -16,7 +16,7 @@ const ActivityPage = () => {
   let tempArray = [];
 
   useEffect(() => {
-    console.log(process.env.REACT_APP_TISTORY_ACCESS_TOKEN);
+    //console.log(process.env.REACT_APP_TISTORY_ACCESS_TOKEN);
     Axios.get(
       `https://www.tistory.com/apis/post/list?access_token=${process.env.REACT_APP_TISTORY_ACCESS_TOKEN}&output=json&blogName=corner-ds&page=1`
     )
