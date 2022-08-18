@@ -2,7 +2,7 @@ import React from "react";
 import styled from "../css/ActivityPage.module.css";
 
 const StudyCard = ({ data }) => {
-  const content = data.content?.substr(0, 200);
+  const content = data.content?.repleaceAll('&nbsp;','').substr(0, 180);
   return (
     
     <div className={styled.CardBlock}>
